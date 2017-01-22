@@ -1,0 +1,22 @@
+{
+  "name": "broadcast-socket-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bernardstanislas/broadcast-socket-server.git"
+  },
+  "author": "bernardstanislas@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bernardstanislas/broadcast-socket-server/issues"
+  },
+  "homepage": "https://github.com/Bernardstanislas/broadcast-socket-server#readme",
+  "dependencies": {
+    "ws": "1.1.1"
+  }
+}
