@@ -1,5 +1,8 @@
 const WebSocketServer = require('ws').Server;
-const wss = new WebSocketServer({ port: 8080 });
+const winston = require('winston');
+
+const wss = new WebSocketServer({ port: 3000 });
+winston.level = 'debug';
  
 wss.broadcast = data => {
   wss.clients.map(client => {
@@ -8,5 +11,11 @@ wss.broadcast = data => {
 };
 
 wss.on('connection', ws => {
-  ws.on('message', wss.broadcast);
+  winston.log('info', 'New connection');
+  ws.on('message', msg => {
+    winston.log('verbose', 'Message', msg);
+    wss.broadcast(msg);
+  });
 });
+
+winston.log('info', 'Websocket server started :)');

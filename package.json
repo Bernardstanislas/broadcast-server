@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Bernardstanislas/broadcast-socket-server#readme",
   "dependencies": {
+    "winston": "2.3.1",
     "ws": "1.1.1"
   }
 }
