@@ -1,7 +1,7 @@
 const WebSocketServer = require('ws').Server;
 const winston = require('winston');
 
-const wss = new WebSocketServer({ port: 3000 });
+const wss = new WebSocketServer({ port: process.env.PORT || 3000 });
 winston.level = 'debug';
  
 wss.broadcast = data => {
